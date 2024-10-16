@@ -13,5 +13,6 @@ $bar_logo = isset( $data['bar_logo'] ) ? $data['bar_logo'] : '';
   <?php echo esc_html( $menu_title ); ?>
   <?php if ( !empty( $bar_logo ) ) : ?>
     <img class="bar_logo" alt="logo" src="<?php echo esc_url( $bar_logo ); ?>"/>'
-  <?php endif; ?>
+  <?php endif; 
+  ?>
 </div>

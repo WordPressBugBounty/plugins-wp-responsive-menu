@@ -9,6 +9,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <ul id="wprmenu_menu_ul">
   <?php
+  
   if ( $this->option( 'content_before_menu_element' ) !== '' ) :
     $content_before_menu_element = preg_replace( '/\\\\/', '', $this->option( 'content_before_menu_element' ) );
   ?>
@@ -16,8 +17,8 @@ defined( 'ABSPATH' ) || exit;
   <?php endif; ?>
 
   <?php
-    $search_position = $this->option( 'order_menu_items' ) != '' ? $this->option( 'order_menu_items' ) : 'Menu,Search,Social';
     
+    $search_position = $this->option( 'order_menu_items' ) != '' ? $this->option( 'order_menu_items' ) : 'Menu,Search,Social';
     $search_position = explode( ',', $search_position );
     
     foreach ( $search_position as $key => $menu_element ) :
@@ -49,6 +50,8 @@ defined( 'ABSPATH' ) || exit;
         endif;
       endif;
     endforeach;
+
+    
     ?>
 
     <?php

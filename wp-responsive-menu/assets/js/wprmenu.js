@@ -59,7 +59,7 @@ jQuery( document ).ready( function( $ ) {
   var	Mgwprm = document.getElementById( 'mg-wprm-wrap' );
 	var	wprm_menuDir = document.getElementById( 'wprMenu' );
 	body = document.body;
-
+  
   /**
   ----------------------------------------
   * 
@@ -73,22 +73,29 @@ jQuery( document ).ready( function( $ ) {
 	jQuery('.wprmenu_bar').click( function(e) {
 		if( $(e.target).hasClass('bar_logo') )
 			return;
+    
+    
 
 		classie.toggle( this, 'active' );
 		jQuery(this).find('div.hamburger').toggleClass('is-active');
-
+    
 		if( jQuery(this).hasClass('active') ) {
 		  jQuery('html').addClass('wprmenu-body-fixed');
-
+      
 			if( wprmenu.enable_overlay == '1' ) {
 			 jQuery('div.wprm-wrapper').find('.wprm-overlay').addClass('active');
+       
+       
 			}
 		}
 		else {
 			jQuery('html').removeClass('wprmenu-body-fixed');
+      
 			if( wprmenu.enable_overlay == '1' ) {
 				jQuery('div.wprm-wrapper').find('.wprm-overlay').removeClass('active');
 			}
+
+      
 		}
 
     /**
@@ -126,7 +133,21 @@ jQuery( document ).ready( function( $ ) {
 			else
 				jQuery('body').css('left','0px');
 		}
+    
 		classie.toggle(Mgwprm, 'cbp-spmenu-open');
+
+    var wprmenuDemoId = wprmenu.wprmenuDemoId;
+    
+    if ( wprmenuDemoId ==  6 ) {
+      jQuery('div.wprm-wrapper').addClass('wp-responsive-menu-demo1');
+      // classie.toggle(Mgwprm, 'wp-responsive-menu-demo1');
+    }else if ( wprmenuDemoId ==  7 ) {
+      jQuery('div.wprm-wrapper').addClass('wp-responsive-menu-demo2');
+      // classie.toggle(Mgwprm, 'wp-responsive-menu-demo2');
+    }else if ( wprmenuDemoId ==  9 ) {
+      jQuery('div.wprm-wrapper').addClass('wp-responsive-menu-demo3');
+      // classie.toggle(Mgwprm, 'wp-responsive-menu-demo3');
+    }
 
 		close_sub_uls();
 

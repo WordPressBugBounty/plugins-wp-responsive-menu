@@ -181,7 +181,7 @@ class WP_Responsive_Menu {
 		wp_register_script( 'modernizr', $this->plugin_url() . '/assets/js/modernizr.custom.js', array( 'jquery' ), WPRMENU_VERSION );
 		wp_register_script( 'touchSwipe', $this->plugin_url() . '/assets/js/touchSwipe.js', array( 'jquery' ), WPRMENU_VERSION );
 		wp_register_script('wprmenu.js', $this->plugin_url() . '/assets/js/wprmenu.js', array( 'jquery', 'touchSwipe' ), WPRMENU_VERSION );
-
+    $wprmenu_demo_id = get_option('wprmenu_demo_id');
 		$params = array(
 		 		'zooming' 				=> $this->option( 'zooming' ),
 		 		'from_width' 			=> $this->option( 'from_width' ),
@@ -190,9 +190,11 @@ class WP_Responsive_Menu {
 		 		'parent_click'    => ( $this->option('parent_click') == 'yes' || $this->option('parent_click') == '1' ) ? 'yes' : '',
 		 		'swipe' 					=> $this->option( 'swipe' ),
 		 		'enable_overlay' 	=> $this->option( 'enable_overlay' ),
+		 		'wprmenuDemoId' 	=> $wprmenu_demo_id,
 		 	);
     
-
+       
+      
 		//Localize necessary variables
 		wp_localize_script( 'wprmenu.js', 'wprmenu', $params );
 
@@ -244,7 +246,8 @@ class WP_Responsive_Menu {
         'menu_title'         =>  $menu_title,
         'bar_logo'           =>  $bar_logo
       );
-
+      
+      
 			?>
 
 			<div class="wprm-wrapper">
@@ -336,7 +339,7 @@ class WP_Responsive_Menu {
 
 		$response = 'error';
 		$menu = '';
-
+    
 		if ( $this->option('menu') ) {
 			$menu = $this->option('menu');
 		}
@@ -344,33 +347,50 @@ class WP_Responsive_Menu {
 		if ( isset($_POST) ) {
 			$settings_id = isset($_POST['settings_id']) ? sanitize_text_field( $_POST['settings_id'] ) : '';
 			$demo_type = isset($_POST['demo_type']) ? sanitize_text_field( $_POST['demo_type'] ) : '';
-
+      
 			$demo_id = isset( $_POST['demo_id'] ) ? sanitize_text_field( $_POST['demo_id'] ) : '';
 
+      
 			if ( $settings_id !== '' 
 				&& $demo_type !== '' 
 				&& $demo_id !== ''  ) {
 				$site_name = WPRMENU_DEMO_SITE_URL;
-				$remoteLink = $site_name.'/wp-json/wprmenu-server/v2/type='.$demo_type.'/demo_name='.$demo_id.'/settings_id='.$settings_id;
-
+				$remoteLink = $site_name.'wp-json/wprmenu-import/v2/type='. $demo_type . '/demo_name=' . $demo_id . '/settings_id='.$settings_id;
+       
 				$content = wp_remote_get($remoteLink);
-
+       
 				if ( is_array( $content ) 
 					&& isset( $content['response'] ) 
 					&& $content['response']['code'] == 200  ) {
-					
+            
 					$content = $content['body'];
+         
 					$items = json_decode( $content, true );
-          $items = wpr_of_sanitize_array( $items );
-					
+          $items = json_decode( $items['body'], true );
+
 					if( is_array( $items ) ) {
 						$items['menu'] = $menu;
 					}
+          $content = $items;
 
-					if( !empty( $content ) ) {
-						$response = 'success';
+          if( $content ) {
+            $response = 'success';
+
             update_option( 'wprmenu_options', $content );
-					}
+
+            update_option( 'wprmenu_demo_id', $demo_id );
+            // global $wpdb;
+        
+            // $wpdb->update(
+            //   $wpdb->prefix.'options',
+            //   array(
+            //     'option_value' => $content,
+            //   ),
+            //   array(
+            //     'option_name' => 'wprmenu_options',
+            //   )
+            // );
+          }
 					else {
 						$response = 'error';
 					}
@@ -386,7 +406,8 @@ class WP_Responsive_Menu {
 		else {
 			$response = 'error';
 		}
-    wp_send_json( array( 'status' => $response ) );
+    wp_send_json( array( 'status' => $response, ) );
+
 	}
 
 

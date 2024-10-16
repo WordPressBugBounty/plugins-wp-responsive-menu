@@ -61,9 +61,9 @@ final class WPR_Menu_Loader {
     $this->define( 'WPRMENU_OPTIONS_FRAMEWORK_DIRECTORY', plugins_url( '/', __FILE__ ) );
     $this->define( 'WPRMENU_OPTIONS_FRAMEWORK_PATH', dirname( __FILE__ ) . '/' );
     $this->define( 'WPRMENU_SITE_URL', 'https://www.magnigenie.com' );
-    $this->define( 'WPRMENU_DEMO_SITE_URL', 'http://demo.magnigenie.com/wp-responsive-menu-pro' );
+    $this->define( 'WPRMENU_DEMO_SITE_URL', 'http://demo.magnigenie.com/' );
     $this->define( 'WPRMENU_PRO_LINK', WPRMENU_SITE_URL . '/downloads/wp-responsive-menu-pro/?utm_source=wp-plugins&utm_campaign=upgrade-to-pro&utm_medium=wp-dash' );
-    $this->define( 'WPRMENU_SHOP_LINK', WPRMENU_SITE_URL . '/shop?utm_source=wp-plugins&utm_campaign=other-plugins&utm_medium=wp-dash' );
+    $this->define( 'WPRMENU_SHOP_LINK', WPRMENU_SITE_URL . '/our-products/' );
   }
 
   /**

@@ -500,7 +500,7 @@ class WPRMenu_Framework_Interface {
       // Showcase and demo import
       case "showcase":
         $output .= '<div class="wprmenu-showcase-wrapper">';
-        //$output .= WPRMenu_Framework_Interface::wprmenu_get_demodata();
+        // $output .= WPRMenu_Framework_Interface::wprmenu_get_demodata();
         $output .= '</div>';
           break;
 
@@ -643,12 +643,12 @@ class WPRMenu_Framework_Interface {
   }
 
   static function wprmenu_get_demodata($demo_type) {
-
+    
     if( empty($demo_type) )
       return;
 
     $items = get_transient('wprm_api_demo_items_list');
-
+     
     if( ! $items )
       $items = WPRMenu_Framework_Interface::wprm_fetch_demo_items();
 

@@ -200,7 +200,7 @@ class WPRMenu_Framework_Admin {
 
     wp_register_script( 'wprmenu-import-demo', $this->wprmenu_admin_url() . '/assets/js/wprmenu-import-demo.js', array('jquery', 'wpr-exit-intent', 'Sweetalert2-js'),  WPRMENU_VERSION );
 
-    $enable_preview = !empty( $options ) ? $options['wpr_live_preview'] : 0;
+    $enable_preview = !empty( $options->wpr_live_preview ) ? $options->wpr_live_preview : 0;
 
     $params = array(
       'ajax_url'            =>  admin_url( 'admin-ajax.php' ),

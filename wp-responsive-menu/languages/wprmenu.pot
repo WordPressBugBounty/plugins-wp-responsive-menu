@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Responsive Menu\n"
-"POT-Creation-Date: 2023-02-15 18:25+0530\n"
-"PO-Revision-Date: 2023-02-15 18:25+0530\n"
+"POT-Creation-Date: 2024-10-16 11:11+0530\n"
+"PO-Revision-Date: 2024-10-16 11:10+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: wp-responsive-menu.php\n"
@@ -21,11 +21,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: inc/class-wp-responsive-menu.php:87 inc/class-wp-responsive-menu.php:490
+#: inc/class-wp-responsive-menu.php:87 inc/class-wp-responsive-menu.php:511
 msgid "Settings"
 msgstr ""
 
-#: inc/class-wp-responsive-menu.php:88 inc/class-wp-responsive-menu.php:479
+#: inc/class-wp-responsive-menu.php:88 inc/class-wp-responsive-menu.php:500
 msgid "Get Pro Version"
 msgstr ""
 
@@ -33,21 +33,21 @@ msgstr ""
 msgid "Check Demo"
 msgstr ""
 
-#: inc/class-wp-responsive-menu.php:334 inc/class-wp-responsive-menu.php:423
+#: inc/class-wp-responsive-menu.php:337 inc/class-wp-responsive-menu.php:444
 msgid "Error while verifying your request! Try again."
 msgstr ""
 
-#: inc/class-wp-responsive-menu.php:406
+#: inc/class-wp-responsive-menu.php:427
 msgid ""
 "You have not set any menu in the menu settings. Please select a menu from "
 "General settings tab"
 msgstr ""
 
-#: inc/class-wp-responsive-menu.php:450 inc/wprmenu-options.php:110
+#: inc/class-wp-responsive-menu.php:471 inc/wprmenu-options.php:110
 msgid "Live Preview"
 msgstr ""
 
-#: inc/class-wp-responsive-menu.php:480
+#: inc/class-wp-responsive-menu.php:501
 msgid "Check Our Other Plugins"
 msgstr ""
 

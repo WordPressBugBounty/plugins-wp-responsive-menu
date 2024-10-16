@@ -18,7 +18,7 @@ jQuery(function($) {
     var DemoType = SelectedNode.attr( 'data-demo-type' );
     var DemoId = SelectedNode.attr( 'data-demo-id' );
     var SettingsId = SelectedNode.attr( 'data-settings' );
-
+    console.log(SelectedNode);
     if( SettingsId == '' &&  SelectedButton.hasClass( 'required-pro' ) ) {
       Swal({
         type  : 'info',
@@ -38,7 +38,6 @@ jQuery(function($) {
         url     : wprmenu_params.ajax_url,
         data    : 'nonce='+ wprmenu_params.nonce + '&settings_id='+ SettingsId + '&demo_id=' + DemoId + '&demo_type=' +DemoType+ '&action=wprmenu_import_data',
         success : function( response ) {
-          response = $.parseJSON( response );
 
           if( response.status == 'success' ) {
             Swal({
