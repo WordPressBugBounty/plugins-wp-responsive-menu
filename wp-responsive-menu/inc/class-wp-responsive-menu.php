@@ -499,6 +499,10 @@ class WP_Responsive_Menu {
         $row_meta = array(
           'get_pro'    => '<a target="_blank" href="' . esc_url( apply_filters( 'pro_url', WPRMENU_PRO_LINK ) ) . '" aria-label="' . esc_attr__( 'Get Pro Version', 'wprmenu' ) . '">' . esc_html__( 'Get Pro Version', 'wprmenu' ) . '</a>',
           'other_plugins' => '<a target="_blank" href="' . esc_url( apply_filters( 'other_plugins', WPRMENU_SHOP_LINK ) ) . '" aria-label="' . esc_attr__( 'Check Our Other Plugins', 'wprmenu' ) . '">' . esc_html__( 'Check Our Other Plugins', 'wprmenu' ) . '</a>',
+          
+          'Restaurant_Solutions' => '<a target="_blank" href="' . esc_url( apply_filters( 'Restaurant_Solutions', RESTROPRESS_SITE_LINK ) ) . '" aria-label="' . esc_attr__( 'Restaurant Solutions', 'wprmenu' ) . '">' . esc_html__( 'Restaurant Solutions', 'wprmenu' ) . '</a>',
+          'WOOcommerce_POS' => '<a target="_blank" href="' . esc_url( apply_filters( 'WOOcommerce_POS', MAGNIPOS_SITE_LINK ) ) . '" aria-label="' . esc_attr__( 'Woocommerce POS', 'wprmenu' ) . '">' . esc_html__( 'Woocommerce POS', 'wprmenu' ) . '</a>',
+          'RestroPress_POS' => '<a target="_blank" href="' . esc_url( apply_filters( 'RestroPress_POS', RESTROPRESSPOS_SITE_LINK ) ) . '" aria-label="' . esc_attr__( 'RestroPress POS', 'wprmenu' ) . '">' . esc_html__( 'RestroPress POS', 'wprmenu' ) . '</a>',
         );
         return array_merge( $links, $row_meta );
       }

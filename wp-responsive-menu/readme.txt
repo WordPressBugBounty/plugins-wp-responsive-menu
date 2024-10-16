@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=pay@magn
 Requires at least: 3.0
 Requires PHP: 5.4
 Tested up to: 6.6.2
-Stable tag: 3.1.9
+Stable tag: 3.1.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -84,6 +84,10 @@ If you have any  suggestions for a new plugin, feel free to email us at info@mag
 
 
 == ChangeLog ==
+
+= Version 3.1.9.1 =
+
+* Added: Useful links added
 
 = Version 3.1.9 =
 * Fixed: Demo template improt issue
@@ -263,6 +267,6 @@ If you have any  suggestions for a new plugin, feel free to email us at info@mag
 
 == Upgrade Notice ==
 
-= Version 3.1.9 =
+= Version 3.1.9.1 =
 
 * New update for WP Responsive Menu is available. Please take a backup before the update.

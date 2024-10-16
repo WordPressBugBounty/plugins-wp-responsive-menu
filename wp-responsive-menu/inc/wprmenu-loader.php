@@ -64,6 +64,10 @@ final class WPR_Menu_Loader {
     $this->define( 'WPRMENU_DEMO_SITE_URL', 'http://demo.magnigenie.com/' );
     $this->define( 'WPRMENU_PRO_LINK', WPRMENU_SITE_URL . '/downloads/wp-responsive-menu-pro/?utm_source=wp-plugins&utm_campaign=upgrade-to-pro&utm_medium=wp-dash' );
     $this->define( 'WPRMENU_SHOP_LINK', WPRMENU_SITE_URL . '/our-products/' );
+    $this->define( 'RESTROPRESS_SITE_LINK', 'https://restropress.com/' );
+    $this->define( 'MAGNIPOS_SITE_LINK', 'https://www.magnipos.com/' );
+    $this->define( 'RESTROPRESSPOS_SITE_LINK', 'https://restropress.com/downloads/restropress-pos/' );
+
   }
 
   /**
