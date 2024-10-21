@@ -346,10 +346,6 @@ div.wpr-clear:after {
 div.wpr-clear {
   display: block;
 }
-.menu-item {
-  display: block !important;
-  width: 100%;
-}
 
 @media only screen and (max-width:768px) {
   .admin-bar #wprmenu_menu_ul {
@@ -536,6 +532,10 @@ body.home.blog.logged-in.admin-bar.ast-header-break-point.ast-separate-container
   color: #fff;
 }*/
 /*-----Demo1------*/
+.wp-responsive-menu-demo1 .menu-item {
+  display: block !important;
+  width: 100%;
+}
 .wp-responsive-menu-demo1 #mg-wprm-wrap {
   background-color: #36CAA1;
 }
@@ -586,6 +586,11 @@ body.home.blog.logged-in.admin-bar.ast-header-break-point.ast-separate-container
   right: 26px;
 }
 /*-----Demo2------*/
+.wp-responsive-menu-demo2 .menu-item {
+  display: block !important;
+  width: 100%;
+}
+
 .wp-responsive-menu-demo2 #mg-wprm-wrap {
   background-color: #212429;
 }
@@ -646,6 +651,10 @@ body.home.blog.logged-in.admin-bar.ast-header-break-point.ast-separate-container
   right: 26px;
 }
 /*-----Demo3------*/
+.wp-responsive-menu-demo3 .menu-item {
+  display: block !important;
+  width: 100%;
+}
 .wp-responsive-menu-demo3 #mg-wprm-wrap {
   background-color: #256ea8;
 }
