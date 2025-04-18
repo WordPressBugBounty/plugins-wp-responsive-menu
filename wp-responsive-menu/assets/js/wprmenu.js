@@ -138,15 +138,18 @@ jQuery( document ).ready( function( $ ) {
 
     var wprmenuDemoId = wprmenu.wprmenuDemoId;
     
-    if ( wprmenuDemoId ==  6 ) {
-      jQuery('div.wprm-wrapper').addClass('wp-responsive-menu-demo1');
-      // classie.toggle(Mgwprm, 'wp-responsive-menu-demo1');
-    }else if ( wprmenuDemoId ==  7 ) {
-      jQuery('div.wprm-wrapper').addClass('wp-responsive-menu-demo2');
-      // classie.toggle(Mgwprm, 'wp-responsive-menu-demo2');
-    }else if ( wprmenuDemoId ==  9 ) {
-      jQuery('div.wprm-wrapper').addClass('wp-responsive-menu-demo3');
-      // classie.toggle(Mgwprm, 'wp-responsive-menu-demo3');
+    if ( wprmenuDemoId ==  15 ) {
+      
+      jQuery('div.wprm-wrapper').addClass('wp-responsive-menu-demo15');
+      
+    }else if ( wprmenuDemoId ==  16 ) {
+
+      jQuery('div.wprm-wrapper').addClass('wp-responsive-menu-demo16');
+      
+    }else if ( wprmenuDemoId ==  17 ) {
+
+      jQuery('div.wprm-wrapper').addClass('wp-responsive-menu-demo17');
+     
     }
 
 		close_sub_uls();

@@ -18,8 +18,9 @@ if ( ! class_exists('WPRMenu_Styles') ) {
 
   class WPRMenu_Styles {
   
-    protected $options = '';
-
+    // protected $options = '';
+    
+    private $wprmenu_options;
     /**
      * Constructor
      */
