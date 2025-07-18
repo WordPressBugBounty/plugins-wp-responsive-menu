@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=pay@magn
 Requires at least: 3.0
 Requires PHP: 5.4
 Tested up to: 6.8
-Stable tag: 3.2
+Stable tag: 3.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,10 @@ WP Responsive Menu turns your WordPress menu to a highly customizable sliding re
 WP Responsive Menu is a simple plugin that lets you add a highly customizable responsive menu to any WordPress site in no time at all and customization can all be done directly from the setting page, with no coding needed at all.
 
 = See it in action: =
+
 [Live Preview](http://demo.magnigenie.com/wp-responsive-menu-pro/)
+
+[Documentations](https://docs.magnigenie.com/docs-category/wp-responsive-menu/)
 
 = Benefits: =
 * Get a nice looking slide menu in less than a minute.
@@ -42,7 +45,15 @@ WP Responsive Menu is a simple plugin that lets you add a highly customizable re
 This plugin works out of box with any theme frameworks like genesis or thesis or any theme and it also works fine with multisite setups.
 
 = WP Responsive Menu Pro In action =
+
+= Latest Version =
+
+[youtube https://www.youtube.com/playlist?list=PLm0OcvyDHnQVfCvWq9g7fsgse5zThiXAe]
+
+= Old Version =
+
 [youtube https://www.youtube.com/watch?v=6_XqAfZoRJ8]
+
 
 = Important Notes =
 [Upgrade to PRO](http://magnigenie.com/wp-responsive-menu-pro/) to avail better support and unrestricted access to WP Responsive Menu.
@@ -84,6 +95,11 @@ If you have any  suggestions for a new plugin, feel free to email us at info@mag
 
 
 == ChangeLog ==
+
+= Version 3.2.1(18-07-2025) =
+
+* Fixed: Open submenu on parent menu click
+* Code cleanup
 
 = Version 3.2 =
 
@@ -275,6 +291,6 @@ If you have any  suggestions for a new plugin, feel free to email us at info@mag
 
 == Upgrade Notice ==
 
-= Version 3.2 =
+= Version 3.2.1 =
 
 * New update for WP Responsive Menu is available. Please take a backup before the update.

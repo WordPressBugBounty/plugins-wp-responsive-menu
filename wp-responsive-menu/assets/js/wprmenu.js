@@ -216,7 +216,7 @@ jQuery( document ).ready( function( $ ) {
 	//expand / collapse action (SUBLEVELS)
 	$('.wprmenu_icon_par').on('click',function() {
 		var t = $(this),
-		child_ul = t.parent('li').find('ul.sub-menu').first();
+		child_ul = t.parent('li').find('ul.sub-menu').first(); 
 		child_ul.slideToggle('300');
 		t.toggleClass('wprmenu_par_opened');
 		t.parent('li').first().toggleClass('wprmenu_no_border_bottom');
@@ -264,7 +264,9 @@ jQuery( document ).ready( function( $ ) {
 	if( wprmenu.parent_click == 'yes' ) {
 		$('a.wprmenu_parent_item').on('click', function( event ){
 			event.preventDefault();
-			$('.wprmenu_icon_par').trigger('click');
+      var t = $(this);
+      // Find the corresponding menu icon and trigger its click
+      t.parent('li').find('.wprmenu_icon_par').first().trigger('click');
 		});
 	}
 	$('#wprmenu_menu_ul a').click(function(){
