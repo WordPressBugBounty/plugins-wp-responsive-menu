@@ -4,7 +4,7 @@ Tags: menu, responsive, responsive menu, mobile, mobile responsive, mobile menu
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=pay@magnigeeks.com&item_name=wp-responsive-menu%20WordPress&return=http://wordpress.org/extend/plugins/wp-responsive-menu/
 Requires at least: 3.0
 Requires PHP: 5.4
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: 3.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
