@@ -15,7 +15,7 @@ $bar_logo     = isset( $data['bar_logo'] ) ? $data['bar_logo'] : '';
 
 ?>
 <div id="wprmenu_bar" class="wprmenu_bar <?php echo esc_html( $slide_type . ' '. $position ); ?>">
-  <div class="hamburger <?php echo esc_html( $menu_icon_animation ); ?>">
+  <div class="hamburger <?php echo esc_html( $menu_icon_animation ); ?>" role="button" tabindex="0" aria-label="<?php esc_attr_e( 'Toggle Navigation', 'wprmenu' ); ?>" aria-expanded="false" aria-controls="mg-wprm-wrap">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>

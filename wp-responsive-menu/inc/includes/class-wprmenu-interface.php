@@ -355,7 +355,7 @@ class WPRMenu_Framework_Interface {
       $output .= '<input type="text" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" id="' . esc_attr( $value['id'] ) . '" value="' . esc_attr( $val ) . '"' . $default_color .' id="' . esc_attr( $value['id'] ) . '"  class="form-control form-color '.$class.' " style="">';
       $output .= '<div class="input-group-btn">';
       $output .= '<div class="eyedropper">';
-      $output .= '<a href="javascript:void(0);"><i class="eyedropper-icon"></i></a>';
+      $output .= '<a href="#"><i class="eyedropper-icon"></i></a>';
       $output .= '</div></div></div></div>';
 
       break;

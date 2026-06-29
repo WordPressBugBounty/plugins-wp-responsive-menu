@@ -1069,3 +1069,8 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://magnigenie.com/"
 msgstr ""
+
+#: inc/templates/default-menu-bar.php:18
+#: inc/templates/custom-menu-bar.php:14
+msgid "Toggle Navigation"
+msgstr ""

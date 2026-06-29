@@ -66,6 +66,22 @@ jQuery( document ).ready( function( $ ) {
 	if( ! $('.wprmenu_bar').hasClass('normalslide') )
 		$('body').addClass('cbp-spmenu-push');
 
+	$('.wprmenu_bar, #custom_menu_icon').on('keydown', function(e) {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			$(this).trigger('click');
+		}
+	});
+
+	$(document).on('keydown', function(e) {
+		if (e.key === 'Escape' && $('#mg-wprm-wrap').hasClass('cbp-spmenu-open')) {
+			var menu_el = $('.wprmenu_bar');
+			if (menu_el.hasClass('active')) {
+				menu_el.trigger('click');
+			}
+		}
+	});
+
 	$('.wprmenu_bar').click( function(event) {
 		if( $(event.target).hasClass('bar_logo') )
 			return;
@@ -217,18 +233,42 @@ jQuery( document ).ready( function( $ ) {
 			$('.hamburger.is-active').trigger('click');
 	});
 	if( wprmenu.swipe == 'yes' ) {
-		$('body').swipe({
-			excludedElements: "button, input, select, textarea, .noSwipe",
-			threshold: 200,
-			swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-				menu_el = $('.wprmenu_bar .hamburger, .wprmenu_bar .wpr-custom-menu');
-				if( direction =='left' && menu_el.hasClass('is-active') )
-					menu_el.trigger('click');
+		var touchstartX = 0;
+		var touchendX = 0;
+		var touchstartY = 0;
+		var touchendY = 0;
+
+		document.addEventListener('touchstart', function(e) {
+			touchstartX = e.changedTouches[0].screenX;
+			touchstartY = e.changedTouches[0].screenY;
+		}, { passive: true });
+
+		document.addEventListener('touchend', function(e) {
+			var target = e.target;
+			if (jQuery(target).is('button, input, select, textarea, .noSwipe') || jQuery(target).parents('button, input, select, textarea, .noSwipe').length > 0) {
+				return;
+			}
+			
+			touchendX = e.changedTouches[0].screenX;
+			touchendY = e.changedTouches[0].screenY;
+			handleSwipe();
+		}, { passive: true });
+
+		function handleSwipe() {
+			var swipeX = touchendX - touchstartX;
+			var swipeY = touchendY - touchstartY;
+			var threshold = 100;
+
+			if (Math.abs(swipeX) > Math.abs(swipeY) && Math.abs(swipeX) > threshold) {
+				var menu_el = jQuery('.wprmenu_bar .hamburger, .wprmenu_bar .wpr-custom-menu');
 				
-				if( direction =='right' && !menu_el.hasClass('is-active') )
+				if (swipeX < 0 && menu_el.hasClass('is-active')) {
 					menu_el.trigger('click');
-    		}
-		});
+				} else if (swipeX > 0 && !menu_el.hasClass('is-active')) {
+					menu_el.trigger('click');
+				}
+			}
+		}
 	}
 
 });

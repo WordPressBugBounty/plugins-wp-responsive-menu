@@ -2,10 +2,10 @@
 Contributors: sagarseth9,magnigenie,kshirod-patel
 Tags: menu, responsive, responsive menu, mobile, mobile responsive, mobile menu
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=pay@magnigeeks.com&item_name=wp-responsive-menu%20WordPress&return=http://wordpress.org/extend/plugins/wp-responsive-menu/
-Requires at least: 3.0
-Requires PHP: 5.4
-Tested up to: 6.9
-Stable tag: 3.2.1
+Requires at least: 5.6
+Requires PHP: 7.2
+Tested up to: 7.0
+Stable tag: 3.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,6 +95,16 @@ If you have any  suggestions for a new plugin, feel free to email us at info@mag
 
 
 == ChangeLog ==
+
+= Version 3.2.2 (29-06-2026) =
+
+* Fixed: swipe navigation event collision with text selection on desktop.
+* Fixed: color picker eyedropper button link redirecting/resetting settings.
+* Improved: performance by replacing TouchSwipe with native TouchEvents (removing Modernizr and TouchSwipe scripts).
+* Improved: accessibility compliance by adding keypress listeners (Enter/Space to toggle, Escape to close) and ARIA roles.
+* Improved: locked and disabled inputs for premium PRO features inside settings panel.
+* Unlocked: Enable RTL Mode switch so it is fully operational in the Free version.
+* Added: RTL language layout stylesheet enqueuing.
 
 = Version 3.2.1(18-07-2025) =
 

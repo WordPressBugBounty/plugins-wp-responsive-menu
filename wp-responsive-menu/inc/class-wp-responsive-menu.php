@@ -163,11 +163,16 @@ class WP_Responsive_Menu {
   public function wprmenu_enqueue_styles() {
     wp_register_style( 'hamburger.css',  $this->plugin_url() . '/assets/css/wpr-hamburger.css', array(), WPRMENU_VERSION );
     wp_register_style( 'wprmenu.css', $this->plugin_url() . '/assets/css/wprmenu.css', array(), WPRMENU_VERSION );
+    wp_register_style( 'wprmenu-rtl-style', $this->plugin_url() . '/assets/css/wprmenu-rtl.css', array(), WPRMENU_VERSION );
     wp_register_style( 'wpr_icons', $this->plugin_url() . '/inc/assets/icons/wpr-icons.css', array(), WPRMENU_VERSION );
 
     wp_enqueue_style( 'hamburger.css' );
     wp_enqueue_style( 'wprmenu.css' );
     wp_enqueue_style( 'wpr_icons' );
+
+    if ( $this->option( 'rtlview' ) == 1 ) {
+      wp_enqueue_style( 'wprmenu-rtl-style' );
+    }
 
     //inline css
     wp_add_inline_style( 'wprmenu.css', $this->wpr_inline_css() );
@@ -178,9 +183,7 @@ class WP_Responsive_Menu {
    * Enqueue scripts.
    */	
 	public function wprmenu_enqueue_scripts() {
-		wp_register_script( 'modernizr', $this->plugin_url() . '/assets/js/modernizr.custom.js', array( 'jquery' ), WPRMENU_VERSION );
-		wp_register_script( 'touchSwipe', $this->plugin_url() . '/assets/js/touchSwipe.js', array( 'jquery' ), WPRMENU_VERSION );
-		wp_register_script('wprmenu.js', $this->plugin_url() . '/assets/js/wprmenu.js', array( 'jquery', 'touchSwipe' ), WPRMENU_VERSION );
+		wp_register_script('wprmenu.js', $this->plugin_url() . '/assets/js/wprmenu.js', array( 'jquery' ), file_exists( WPRMENU_ABSPATH . 'assets/js/wprmenu.js' ) ? filemtime( WPRMENU_ABSPATH . 'assets/js/wprmenu.js' ) : WPRMENU_VERSION );
     $wprmenu_demo_id = get_option('wprmenu_demo_id');
 		$params = array(
 		 		'zooming' 				=> $this->option( 'zooming' ),
@@ -198,8 +201,6 @@ class WP_Responsive_Menu {
 		//Localize necessary variables
 		wp_localize_script( 'wprmenu.js', 'wprmenu', $params );
 
-    wp_enqueue_script( 'modernizr' );
-    wp_enqueue_script( 'touchSwipe' );
     wp_enqueue_script( 'wprmenu.js' );
 	}
 

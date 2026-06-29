@@ -136,7 +136,6 @@ function wpr_optionsframework_options() {
 	$options[] = array( 'name' => __( 'Enable RTL Mode', 'wprmenu' ),
 		'desc' 	=> __( 'If your site uses RTL styles then enable it.', 'wprmenu' ),
 		'id' 		=> 'rtlview',
-		'class'	=> 'pro-feature',
 		'std' 	=> '0',
 		'type' 	=> 'checkbox' );
 

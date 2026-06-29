@@ -42,6 +42,10 @@ jQuery( document ).ready( function($) {
     $( this ).find( '.wpr-pro-block' ).toggleClass( 'show' );
   });
 
+  // Disable all inputs/selects inside pro features
+  $( '#wpr_optionsframework .pro-feature' ).find( 'input, select, textarea' ).prop( 'disabled', true );
+  $( '#wpr_optionsframework .pro-feature .wprmenu_checkbox_container' ).addClass( 'disabled' );
+
 
   /**
   ----------------------------------------
@@ -133,6 +137,9 @@ jQuery( document ).ready( function($) {
   });
   
   jQuery( 'body' ).on( 'click', '.wprmenu_checkbox_container', function() {
+    if ( $( this ).hasClass( 'disabled' ) || $( this ).closest( '.pro-feature' ).length ) {
+      return false;
+    }
     $( this ).toggleClass( 'checked' );
     if( $( this ).hasClass( 'checked' ) ) {
       $( this ).find( 'input' ).prop( 'checked', true );

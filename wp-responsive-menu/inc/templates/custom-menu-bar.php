@@ -11,7 +11,7 @@ $position = isset( $data['position'] ) ? $data['position'] : '';
 $menu_icon_animation = isset( $data['icon_animation'] ) ? $data['icon_animation'] : '';
 ?>
 <div class="wprmenu_bar wpr_custom_menu <?php echo esc_attr( $slide_type ). ' ' . esc_attr( $position ); ?>">
-  <div id="custom_menu_icon" class="hamburger <?php echo esc_attr( $menu_icon_animation ); ?>">
+  <div id="custom_menu_icon" class="hamburger <?php echo esc_attr( $menu_icon_animation ); ?>" role="button" tabindex="0" aria-label="<?php esc_attr_e( 'Toggle Navigation', 'wprmenu' ); ?>" aria-expanded="false" aria-controls="mg-wprm-wrap">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>
