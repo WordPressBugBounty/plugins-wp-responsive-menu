@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=pay@magn
 Requires at least: 5.6
 Requires PHP: 7.2
 Tested up to: 7.0
-Stable tag: 3.2.2
+Stable tag: 3.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,6 +95,10 @@ If you have any  suggestions for a new plugin, feel free to email us at info@mag
 
 
 == ChangeLog ==
+
+= Version 3.2.3 (09-07-2026) =
+
+* Fixed: search form accessibility validation issue (missing id on input and empty label).
 
 = Version 3.2.2 (29-06-2026) =
 
